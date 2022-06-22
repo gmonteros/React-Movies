@@ -17,14 +17,24 @@ const App = () => {
 	const [trailer, setTrailer] = useState([]);
 
 	const getMovieRequest = async (searchValue) => {
-		const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=263d22d8`;
+		if (!searchValue) {
+			return;
+		}
+
+		//const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=263d22d8`;
+
+		//const url = `http://localhost:8080/api/search?title=${searchValue}`;
+
+		const url = `http://localhost:8083/api/movies/getMoviesByTitle/${searchValue}`;
 
 		//const url = `https://api.themoviedb.org/3/${searchValue}/movie?api_key=07a61de5b731a869bc9cec8e25d2c8a8&query=`;
 		const response = await fetch(url);
 		const responseJson = await response.json();
 
-		if (responseJson.Search) {
-			setMovies(responseJson.Search);
+
+		if (responseJson) {
+			setMovies(responseJson);
+
 		}
 	};
 
@@ -66,8 +76,9 @@ const App = () => {
 		setSelected({});
 	}
 
-	const openDetail = (imdbID) => {
-		const api = `https://api.themoviedb.org/3/movie/${imdbID}?api_key=07a61de5b731a869bc9cec8e25d2c8a8`
+	const openDetail = (UUID) => {
+		//const api = `https://api.themoviedb.org/3/movie/${imdbID}?api_key=07a61de5b731a869bc9cec8e25d2c8a8`
+		const api = `http://localhost:8083/api/movies/getMovie/${UUID}`;
 		axios(api)
 			.then(res => res)
 			.then(data => {
@@ -76,7 +87,8 @@ const App = () => {
 	}
 
 	let showTrailer = (imdbID) => {
-		axios('https://api.themoviedb.org/3/movie/' + imdbID + '/videos?api_key=07a61de5b731a869bc9cec8e25d2c8a8')
+		//axios('https://api.themoviedb.org/3/movie/' + imdbID + '/videos?api_key=07a61de5b731a869bc9cec8e25d2c8a8')
+		axios('http://localhost:8083/api/movies/getMovie/' + imdbID + '/videos?api_key=07a61de5b731a869bc9cec8e25d2c8a8')
 			.then(res => res)
 			.then(data => {
 				if (data.data.results.length === 0) {
@@ -105,19 +117,19 @@ const App = () => {
 			<div className='row d-flex align-items-center mt-4 mb-4'>
 				<MovieListHeading heading='Favourites' />
 			</div>
-			<div className='row'>
+			{/* <div className='row'>
 				<MovieList
 					movies={favourites}
 					handleFavouritesClick={removeFavouriteMovie}
 					favouriteComponent={RemoveFavourites}
 				/>
-			</div>
+			</div> */}
 			<div className='row'>
-				{console.log('selected', (typeof selected.original_title) != 'string' ? false : true)}
+				{console.log('selected', (typeof selected.title) != 'string' ? false : true)}
 				{
-					(typeof selected.original_title != 'string')
+					(typeof selected.title != 'string')
 						? false
-						: <MovieDetail selected={selected} trailer={trailer} exitbutton={exitButton}
+						: <MovieDetail selected={selected} /* trailer={trailer} */ exitbutton={exitButton}
 						/>
 				}
 			</div>

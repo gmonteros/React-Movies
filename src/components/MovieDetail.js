@@ -29,22 +29,22 @@ function MovieDetail({ selected, exitbutton, trailer }) {
 
                 <div className="container">
 
-                    <a href="#"><img src={'https://image.tmdb.org/t/p/w220_and_h330_face' + selected.poster_path} alt="cover" className="cover" /></a>
+                    <a href="#"><img src={'https://image.tmdb.org/t/p/w220_and_h330_face' + selected.posterPath } alt="cover" className="cover" /></a>
 
-                    <div className="hero" style={{ backgroundImage: `url(${'https://image.tmdb.org/t/p/w1920_and_h800_multi_faces' + selected.poster_path})` }}>
+                    <div className="hero" style={{ backgroundImage: `url(${'https://image.tmdb.org/t/p/w1920_and_h800_multi_faces' + selected.posterPath})` }}>
 
                         <div className="details">
 
-                            <div className="title1">{selected.original_title} <span>({selected.original_language.toUpperCase()})</span></div>
+                            <div className="title1">{selected.title} </div>
 
-                            <div className="title2">Categories: {getCategories(selected)}</div>
+                            <div className="title2">Categories: {selected.genre}</div>
                             {/*  
                             <fieldset className="rating">
 
                                 {SomeStars(selected.vote_average)}
                             </fieldset> */}
 
-                            <span className="likes">{selected.vote_count} likes</span>
+                            {/* <span className="likes">{selected.vote_count} likes</span> */}
 
                         </div>
 
@@ -54,14 +54,14 @@ function MovieDetail({ selected, exitbutton, trailer }) {
 
                         <div className="column2">
 
-                            <p>{selected.overview}</p>
+                            <p>{selected.synopsis}</p>
 
                         </div>
-                        <div className="column3">
+                        {/* <div className="column3">
                             <h3>Trailer:</h3>
                             {console.log(trailer)}
                             <ReactPlayer width="100%" height="200px" url={trailer} playing />
-                        </div>
+                        </div> */}
                     </div>
                     <a href="#" onClick={() => exitbutton()} className="close" />
 

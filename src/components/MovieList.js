@@ -6,17 +6,21 @@ const MovieList = (props) => {
 	return (
 		<>
 			{props.movies.map((movie, index) => (
-				<div className='image-container d-flex justify-content-start m-3'>
-					<img src={movie.Poster} alt='movie' onClick={() => {
-						props.opendetail(movie.imdbID) // get movie details
-						props.showTrailer(movie.imdbID) // get movie trailer youtube link
+				<div key={movie.movieUUID} className='image-container d-flex justify-content-start m-3'>
+					<img src={movie.posterPath} alt='movie' onClick={() => {
+						props.opendetail(movie.movieUUID) // get movie details
+						//props.showTrailer(movie.movieUUID) // get movie trailer youtube link
 					}}></img>
-					<div
+					<h2 onClick={() => {
+						props.opendetail(movie.movieUUID)
+					}}>
+						{movie.title} ({movie.releaseYear})</h2>
+				{/* 	<div
 						onClick={() => props.handleFavouritesClick(movie)}
 						className='overlay d-flex align-items-center justify-content-center'
 					>
 						<FavouriteComponent />
-					</div>
+					</div> */}
 				</div>
 			))}
 		</>
