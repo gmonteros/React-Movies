@@ -29,7 +29,7 @@ function MovieDetail({ selected, exitbutton, trailer }) {
 
                 <div className="container">
 
-                    <a href="#"><img src={'https://image.tmdb.org/t/p/w220_and_h330_face' + selected.posterPath } alt="cover" className="cover" /></a>
+                    <a href="#"><img src={`http://localhost:8083/posters/${selected.posterPath}`} alt="cover" className="cover" /></a>
 
                     <div className="hero" style={{ backgroundImage: `url(${'https://image.tmdb.org/t/p/w1920_and_h800_multi_faces' + selected.posterPath})` }}>
 
@@ -57,11 +57,11 @@ function MovieDetail({ selected, exitbutton, trailer }) {
                             <p>{selected.synopsis}</p>
 
                         </div>
-                        {/* <div className="column3">
+                        <div className="column3">
                             <h3>Trailer:</h3>
                             {console.log(trailer)}
-                            <ReactPlayer width="100%" height="200px" url={trailer} playing />
-                        </div> */}
+                            <ReactPlayer width="100%" height="200px" url={`http://localhost:8083/videos/${selected.videoPath}`} playing />
+                        </div>
                     </div>
                     <a href="#" onClick={() => exitbutton()} className="close" />
 
