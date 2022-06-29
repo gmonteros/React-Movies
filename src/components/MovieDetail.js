@@ -31,7 +31,8 @@ function MovieDetail({ selected, exitbutton, trailer }) {
 
                     <a href="#"><img src={`http://localhost:8083/posters/${selected.posterPath}`} alt="cover" className="cover" /></a>
 
-                    <div className="hero" style={{ backgroundImage: `url(${'https://image.tmdb.org/t/p/w1920_and_h800_multi_faces' + selected.posterPath})` }}>
+                    {/* <div className="hero" style={{ backgroundImage: `url(${'https://image.tmdb.org/t/p/w1920_and_h800_multi_faces' + selected.posterPath})` }}> */}
+                    <div className="hero" style={{ backgroundImage: `url('http://localhost:8083/posters/${selected.posterPath}')` }}>
 
                         <div className="details">
 

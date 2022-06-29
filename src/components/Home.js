@@ -14,7 +14,7 @@ import Inicio from './Inicio'
 
 const App = () => {
 	const [movies, setMovies] = useState([]);
-	const [favourites, setFavourites] = useState([]);
+	// const [favourites, setFavourites] = useState([]);
 	const [searchValue, setSearchValue] = useState('');
 	const [selected, setSelected] = useState({});
 	const [trailer, setTrailer] = useState([]);
@@ -34,7 +34,6 @@ const App = () => {
 		const response = await fetch(url);
 		const responseJson = await response.json();
 
-
 		if (responseJson) {
 			setMovies(responseJson);
 
@@ -45,7 +44,7 @@ const App = () => {
 		getMovieRequest(searchValue);
 	}, [searchValue]);
 
-	useEffect(() => {
+	/* useEffect(() => {
 		const movieFavourites = JSON.parse(
 			localStorage.getItem('react-movie-app-favourites')
 		);
@@ -53,9 +52,9 @@ const App = () => {
 		if (movieFavourites) {
 			setFavourites(movieFavourites);
 		}
-	}, []);
+	}, []); */
 
-	const saveToLocalStorage = (items) => {
+	/* const saveToLocalStorage = (items) => {
 		localStorage.setItem('react-movie-app-favourites', JSON.stringify(items));
 	};
 
@@ -73,7 +72,7 @@ const App = () => {
 		setFavourites(newFavouriteList);
 		saveToLocalStorage(newFavouriteList);
 	};
-
+ */
 	// exit modal exit component
 	const exitButton = () => {
 		setSelected({});
@@ -118,15 +117,15 @@ const App = () => {
 
 					<MovieList
 						movies={movies}
-						handleFavouritesClick={addFavouriteMovie}
-						favouriteComponent={AddFavourites}
+						// handleFavouritesClick={addFavouriteMovie}
+						// favouriteComponent={AddFavourites}
 						opendetail={openDetail}
 						/* showTrailer={showTrailer} */
 					/>
 				</div>
-				<div className='row d-flex align-items-center mt-4 mb-4'>
+				{/* <div className='row d-flex align-items-center mt-4 mb-4'>
 					<MovieListHeading heading='Favourites' />
-				</div>
+				</div> */}
 				{/* <div className='row'>
 				<MovieList
 					movies={favourites}
