@@ -47,7 +47,7 @@
  .container {
 	 margin: 0 auto;
 	 width: 90vw;
-	 height: 640px;
+	 height: 940px;
 	 background: #f0f0ed;
 	 border-radius: 5px;
 	 position: relative;
@@ -78,8 +78,8 @@
 }
  .cover {
 	 position: absolute;
-	 top: 160px;
-	 left: 40px;
+	  top: 50px;
+	 /*left: 40px; */
 	 z-index: 2;
 }
  .details {
@@ -275,10 +275,10 @@
   }
   
   .column3{
-	  width: 35%;
+	  width: 85%;
 	  padding:1rem;
 	  float:right;
-	  color:red;
+	  color:gray;
 	  background-color:black;
 	  height: auto;
   }
