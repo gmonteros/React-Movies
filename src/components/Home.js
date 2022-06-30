@@ -103,15 +103,21 @@ const App = () => {
  */
 	return (
 		<>
+			<div align="center">
 
-			<div /* className='container-fluid movie-app' */>
-				<div className='row d-flex align-items-center mt-4 mb-4'>
-					
-					{/* <img
+				<h1>Films</h1>
+			</div>
+			<div className='container' /*-fluid movie-app' */>
+				<div className='row d-flex align-items-center mt-4 mb-4' >
+
+					<img
 						src="https://t-mobile.scene7.com/is/image/Tmusprod/netflix-hero.desktop?wid=1280&hei=360&fmt=png-alpha"
 						alt=""
-					/> */}
-					<MovieListHeading heading='Movies' />
+					/>
+					{/* <MovieListHeading heading='Films' /> */}
+
+				</div>
+				<div className='row justify-content-md-center'>
 					<SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
 				</div>
 				<div className='row'>
@@ -121,7 +127,7 @@ const App = () => {
 						// handleFavouritesClick={addFavouriteMovie}
 						// favouriteComponent={AddFavourites}
 						opendetail={openDetail}
-						/* showTrailer={showTrailer} */
+					/* showTrailer={showTrailer} */
 					/>
 				</div>
 				{/* <div className='row d-flex align-items-center mt-4 mb-4'>

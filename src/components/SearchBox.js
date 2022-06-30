@@ -2,7 +2,7 @@ import React from 'react';
 
 const SearchBox = (props) => {
 	return (
-		<div className='col col-sm-8'>
+		<div className='col col-lg-8 justify-content-md-center' >
 			<input
 				className='form-control'
 				value={props.value}

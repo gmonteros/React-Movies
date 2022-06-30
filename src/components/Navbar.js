@@ -7,9 +7,9 @@ const Navbar = () => {
       <div className="logo">SpringFilm</div>
       <div className="menus">
         <ul className="menu">
-          <li><Link to='/'>Homepage</Link></li>
+          {/* <li><Link to='/'>Homepage</Link></li>
           <li><Link to='/'>Series</Link></li>
-          <li><Link to='/'>Movies</Link></li>
+          <li><Link to='/'>Movies</Link></li> */}
          {/*  <li><Link to='/watchlist'>Watchlist</Link></li>
           <li><Link to='/wontact'>Contact</Link></li> */}
         </ul>

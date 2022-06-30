@@ -3,7 +3,7 @@ import Home from './components/Home'
 /* import Contact from './components/Contact'
 import Watchlist from './components/Watchlist' */
 import Navbar from "./components/Navbar";
-/* import Footer from "./components/Footer"; */
+import Footer from "./components/Footer";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
           {/* <Route path='/contact' element={<Contact />} />
           <Route path='/watchlist' element={<Watchlist />} /> */}
         </Routes>
-        {/* <Footer /> */}
+        <Footer />
       </Router>
 
 
