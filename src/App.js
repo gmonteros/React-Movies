@@ -1,10 +1,10 @@
 import './App.css';
-import Home from './components/Home'
+import Home from './components/Home';
 /* import Contact from './components/Contact'
 import Watchlist from './components/Watchlist' */
-import Navbar from "./components/Navbar";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Footer from "./components/Footer";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Navbar from "./components/Navbar";
 
 function App() {
   return (

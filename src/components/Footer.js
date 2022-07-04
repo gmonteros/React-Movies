@@ -1,4 +1,3 @@
-import React from 'react'
 import bg from '../asset/footer-bg.jpg';
 
 const Footer = () => {

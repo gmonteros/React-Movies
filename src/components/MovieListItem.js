@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import './Home.css';
 
 const MovieListItem = (props) => {
@@ -10,7 +10,6 @@ const MovieListItem = (props) => {
 		}
 
 		//const url = `http://localhost:8083/api/movies/getMoviesByTitle/${searchValue}`;
-
 		const url = `https://api.themoviedb.org/3/search/movie?api_key=07a61de5b731a869bc9cec8e25d2c8a8&query=${movieTitle}`;
 		const response = await fetch(url);
 		const responseJson = await response.json();
@@ -35,13 +34,7 @@ const MovieListItem = (props) => {
 			<p onClick={() => {
 				props.opendetail(props.movie.movieUUID)
 			}}>
-				{props.movie.title} ({props.movie.releaseYear})</p>
-			{/* 	<div
-						onClick={() => props.handleFavouritesClick(movie)}
-						className='overlay d-flex align-items-center justify-content-center'
-					>
-						<FavouriteComponent />
-					</div> */}
+				{props.movie.title} ({props.movie.releaseYear})</p>			
 		</div>
 	);
 };
