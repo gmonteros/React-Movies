@@ -9,7 +9,6 @@ import Navbar from "./components/Navbar";
 function App() {
   return (
     <>
-
       <Router>
         <Navbar />
         <Routes>
@@ -19,8 +18,6 @@ function App() {
         </Routes>
         <Footer />
       </Router>
-
-
     </>
   );
 };
