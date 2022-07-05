@@ -69,6 +69,10 @@ const App = () => {
 			</div>
 			<div className='container' /*-fluid movie-app' */>
 				<div className='row d-flex align-items-center mt-4 mb-4' >
+					{/* <img
+						src="https://www.bullvpn.com/upload/img/content/Blog/disneyplus-hotstar/20210630q7lsugytqpkqohjo.jpg?1625043714954"
+						alt=""
+					/> */}
 					<img
 						src="https://t-mobile.scene7.com/is/image/Tmusprod/netflix-hero.desktop?wid=1280&hei=360&fmt=png-alpha"
 						alt=""

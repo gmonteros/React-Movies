@@ -46,7 +46,8 @@ function MovieDetail({ selected, exitbutton, trailer }) {
                         <div className="column3">
                             <h3>Trailer:</h3>
                             {console.log(trailer)}
-                            <ReactPlayer width="100%" height="200px" url={`http://localhost:8083/videos/${selected.videoPath}`} playing />
+                            {/* <ReactPlayer width="100%" height="200px" url={`http://localhost:8083/videos/${selected.videoPath}`} playing /> */}
+                            <ReactPlayer width="100%" height="200px" url={`http://localhost:8083/api/videos/video/${selected.videoPath}`} playing />
                         </div>
                     </div>
                     <a href="#" onClick={() => exitbutton()} className="close" />
