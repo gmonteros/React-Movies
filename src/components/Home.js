@@ -10,7 +10,6 @@ const App = () => {
 	const [movies, setMovies] = useState([]);
 	const [searchValue, setSearchValue] = useState('');
 	const [selected, setSelected] = useState({});
-	const [trailer, setTrailer] = useState([]);
 
 	const getMovieRequest = async (searchValue) => {
 		if (!searchValue) {
@@ -49,19 +48,6 @@ const App = () => {
 			})
 	}
 
-	/* let showTrailer = (imdbID) => {
-		//axios('https://api.themoviedb.org/3/movie/' + imdbID + '/videos?api_key=07a61de5b731a869bc9cec8e25d2c8a8')
-		axios('http://localhost:8083/api/movies/getMovie/' + imdbID + '/videos?api_key=07a61de5b731a869bc9cec8e25d2c8a8')
-			.then(res => res)
-			.then(data => {
-				if (data.data.results.length === 0) {
-					setTrailer('https://www.youtube.com/watch?v=tvJTFMQei4g');
-				} else {
-					setTrailer('https://www.youtube.com/watch?v=' + data.data.results[0].key);
-				}
-			})
-	}
- */
 	return (
 		<>
 			<div align="center">
@@ -84,8 +70,7 @@ const App = () => {
 				<div className='row'>
 					<MovieList
 						movies={movies}
-						opendetail={openDetail}
-					/* showTrailer={showTrailer} */
+						opendetail={openDetail}					
 					/>
 				</div>
 				<div className='row'>
@@ -93,7 +78,7 @@ const App = () => {
 					{
 						(typeof selected.title != 'string')
 							? false
-							: <MovieDetail selected={selected} /* trailer={trailer} */ exitbutton={exitButton}
+							: <MovieDetail selected={selected} exitbutton={exitButton}
 							/>
 					}
 				</div>

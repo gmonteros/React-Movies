@@ -1,10 +1,7 @@
 
-import React from 'react';
 import './Home.css';
 
-
 const MovieList = (props) => {
-	const FavouriteComponent = props.favouriteComponent;
 
 	return (
 		<div className='box'>
