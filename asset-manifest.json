@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/React-Movies/static/css/main.eb0db3d9.chunk.css",
+    "main.js": "/React-Movies/static/js/main.49f8f726.chunk.js",
+    "main.js.map": "/React-Movies/static/js/main.49f8f726.chunk.js.map",
+    "runtime-main.js": "/React-Movies/static/js/runtime-main.731871ec.js",
+    "runtime-main.js.map": "/React-Movies/static/js/runtime-main.731871ec.js.map",
+    "static/css/2.20aa2d7b.chunk.css": "/React-Movies/static/css/2.20aa2d7b.chunk.css",
+    "static/js/2.e07bb686.chunk.js": "/React-Movies/static/js/2.e07bb686.chunk.js",
+    "static/js/2.e07bb686.chunk.js.map": "/React-Movies/static/js/2.e07bb686.chunk.js.map",
+    "index.html": "/React-Movies/index.html",
+    "static/css/2.20aa2d7b.chunk.css.map": "/React-Movies/static/css/2.20aa2d7b.chunk.css.map",
+    "static/css/main.eb0db3d9.chunk.css.map": "/React-Movies/static/css/main.eb0db3d9.chunk.css.map",
+    "static/js/2.e07bb686.chunk.js.LICENSE.txt": "/React-Movies/static/js/2.e07bb686.chunk.js.LICENSE.txt",
+    "static/media/footer-bg.67e95f05.jpg": "/React-Movies/static/media/footer-bg.67e95f05.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.731871ec.js",
+    "static/css/2.20aa2d7b.chunk.css",
+    "static/js/2.e07bb686.chunk.js",
+    "static/css/main.eb0db3d9.chunk.css",
+    "static/js/main.49f8f726.chunk.js"
+  ]
+}
